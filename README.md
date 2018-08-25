@@ -35,6 +35,8 @@ The repository contains an ASP.NET Core + Vue.js starter template for both CLI a
 * 3rd party component frameworks (Vuetify, Vue Bootstrap etc.)
 * publish your personal/enterprise plugin and so on...
 
+*For a full feature list, I suggest you to read the [official CLI release statement](https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb) by Evan You.*
+
 ## Prerequisites
 
 * [.NET Core](https://www.microsoft.com/net/download/windows)
@@ -46,9 +48,9 @@ The repository contains an ASP.NET Core + Vue.js starter template for both CLI a
 ## Getting started
 
 * Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
-* Restore client side dependencies by running `npm install` in /ClientApp folder
+* Restore client-side dependencies by running `npm install` in /ClientApp folder
 
-You have two choices when it come at how your preffer to run it. You can either use the command line or the build-in run command.
+You have two choices when it comes to how you prefer to run the app. You can either use the command line or the build-in run command.
 
 ### 1. Using the command line
 
@@ -68,9 +70,9 @@ For now:
 
 Browse to [http://localhost:5000](http://localhost:5000)
 
-## Recommended plugin for debugging VueJS
+## Recommended plugin for debugging Vue
 
-* Get Chrome DevTools for VueJS [here](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+* Get Chrome DevTools for Vue.js [here](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
 
 ---
 
