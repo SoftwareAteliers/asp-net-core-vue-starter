@@ -1,6 +1,6 @@
 {
-  "name": "client-app",
-  "short_name": "client-app",
+  "name": "asp-net-core-vue-starter",
+  "short_name": "asp-net-core-vue-starter",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",

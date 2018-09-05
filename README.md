@@ -1,6 +1,8 @@
 ﻿# ASP.NET Core Vue Starter
 
-The repository contains an ASP.NET Core + Vue.js starter template for both CLI and GUI. The template is created by Vue CLI 3.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
+The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The template is created by Vue CLI 3.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
+
+Original article how to create the starter template is available [here](https://medium.com/software-ateliers/asp-net-core-vue-template-with-custom-configuration-using-cli-3-0-8288e18ae80b).
 
 ---
 
@@ -47,8 +49,28 @@ The repository contains an ASP.NET Core + Vue.js starter template for both CLI a
 
 ## Getting started
 
+There are two ways how to set up the project: one for people who want to create their own template and choose custom integrations and the other for developers who want to start with no configuration.
+
+## 1. Scaffold Vue.js app with custom configuration
+
 * Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
+
+* **Remove all the contents** of the folder /ClientApp 
+* Create a new Vue project by using Vue CLI: `vue create client-app` OR by using CLI graphical interface running `vue ui`
+
+> Unfortunately Vue CLI does not allow us to set a project name by C# standards using Upper Camel Case (Pascal Case) naming convention, so let's initiate app inside of client-app folder and then move the content to ClientApp.
+
+* **Move all the contents from the new folder /client-app to /ClientApp.**
+
+Now application is ready to run.
+
+## 2. Clone the starter with default configuration
+
+* Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
+
 * Restore client-side dependencies by running `npm install` in /ClientApp folder
+
+## Run the application
 
 You have two choices when it comes to how you prefer to run the app. You can either use the command line or the build-in run command.
 
@@ -68,7 +90,7 @@ For now:
 
 ## View your application running
 
-Browse to [http://localhost:5000](http://localhost:5000)
+Browse to [http://localhost:5000](http://localhost:5000) for ASP.&#8203;NET Core + Vue app or browse to [http://localhost:8080](http://localhost:8080) for Vue app only.
 
 ## Recommended plugin for debugging Vue
 

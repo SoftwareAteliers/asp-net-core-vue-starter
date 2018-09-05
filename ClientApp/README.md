@@ -1,4 +1,4 @@
-# client-app
+# ASP.NET Core Vue Starter
 
 ## Project setup
 ```
