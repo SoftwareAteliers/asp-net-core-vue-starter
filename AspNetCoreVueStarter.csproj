@@ -11,6 +11,8 @@
     <Company>Software Ateliers</Company>
     <Description>ASP.NET Core + Vue.js starter project</Description>
     <Copyright>MIT 2018 Software Ateliers</Copyright>
+    <AssemblyName>AspNetCoreVueStarter</AssemblyName>
+    <RootNamespace>AspNetCoreVueStarter</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

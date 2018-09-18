@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace asp_net_core_vue_starter.Pages
+namespace AspNetCoreVueStarter.Pages
 {
     public class ErrorModel : PageModel
     {

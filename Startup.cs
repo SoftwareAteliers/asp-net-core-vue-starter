@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace asp_net_core_vue_starter
+namespace AspNetCoreVueStarter
 {
     public class Startup
     {

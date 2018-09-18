@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asp-net-core-vue-starter", "asp-net-core-vue-starter.csproj", "{D1A4B196-FA92-4822-8C25-07D53A2903EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreVueStarter", "AspNetCoreVueStarter.csproj", "{D1A4B196-FA92-4822-8C25-07D53A2903EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

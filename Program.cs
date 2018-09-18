@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace asp_net_core_vue_starter
+namespace AspNetCoreVueStarter
 {
     public class Program
     {
