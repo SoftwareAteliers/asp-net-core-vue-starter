@@ -37,39 +37,23 @@
   </v-app>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld';
+<script lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data() {
-    return {
-      clipped: true,
-      drawer: true,
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          link: '/',
-        },
-        {
-          title: 'Counter',
-          icon: 'touch_app',
-          link: '/counter',
-        },
-        {
-          title: 'Fetch data',
-          icon: 'get_app',
-          link: '/fetch-data',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      title: 'ASP.NET Core Vue Starter',
-    };
-  },
-};
+@Component({
+  components: { HelloWorld },
+})
+export default class App extends Vue {
+  private clipped: boolean = true;
+  private drawer: boolean = true;
+  private miniVariant: boolean = false;
+  private right: boolean = true;
+  private title: string = 'ASP.NET Core Vue Starter';
+  private items = [
+    { title: 'Home', icon: 'home', link: '/' },
+    { title: 'Counter', icon: 'touch_app', link: '/counter' },
+    { title: 'Fetch data', icon: 'get_app', link: '/fetch-data' },
+  ];
+}
 </script>
