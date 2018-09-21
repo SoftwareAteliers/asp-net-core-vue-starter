@@ -66,9 +66,7 @@ Now application is ready to run.
 
 ## 2. Clone the starter with default configuration
 
-* Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
-
-* Restore client-side dependencies by running `npm install` in /ClientApp folder
+* Just clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
 
 ## Run the application
 
@@ -81,6 +79,8 @@ You have two choices when it comes to how you prefer to run the app. You can eit
 ### 2. Using the built-in run command
 
 * Run the application in VSCode or Visual Studio 2017 by hitting `F5`
+
+> It will take some time during the first run to download all client side dependencies.
 
 ## View your application running
 
