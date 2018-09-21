@@ -55,7 +55,7 @@ There are two ways how to set up the project: one for people who want to create 
 
 * Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
 
-* **Remove all the contents** of the folder /ClientApp 
+* **Remove all the contents** of the folder /ClientApp
 * Create a new Vue project by using Vue CLI: `vue create client-app` OR by using CLI graphical interface running `vue ui`
 
 > Unfortunately Vue CLI does not allow us to set a project name by C# standards using Upper Camel Case (Pascal Case) naming convention, so let's initiate app inside of client-app folder and then move the content to ClientApp.
@@ -76,16 +76,10 @@ You have two choices when it comes to how you prefer to run the app. You can eit
 
 ### 1. Using the command line
 
-> Normally we would run `dotnet run` command to run ASP.NET application and Microsoft ASP.NET Core JavaScriptServices middleware would start a new process for client side application, but middleware does not support Vue CLI 3 out-of-the-box right now, there's a [pull request](https://github.com/aspnet/JavaScriptServices/pull/1726) waiting to be merged.
-
-For now:
-
-* Run the Vue app in /asp-net-core-vue-starter/ClientApp folder with `npm run serve`
 * Run the .NET application using `dotnet run`
 
 ### 2. Using the built-in run command
 
-* Run the Vue app in /asp-net-core-vue-starter/ClientApp folder with `npm run serve`
 * Run the application in VSCode or Visual Studio 2017 by hitting `F5`
 
 ## View your application running

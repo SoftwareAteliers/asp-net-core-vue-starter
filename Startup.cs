@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VueCliMiddleware;
 
 namespace AspNetCoreVueStarter
 {
@@ -57,7 +58,11 @@ namespace AspNetCoreVueStarter
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:8080"); // your Vue app port
+                    // run npm process with client app
+                    spa.UseVueCli("serve", 8080); // your Vue app port
+                    // if you just prefer to proxy requests from client app, use proxy to SPA dev server instead:
+                    // app should be already running before starting a .NET client
+                    // spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
                 }
             });
         }
