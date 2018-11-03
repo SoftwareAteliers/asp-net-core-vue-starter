@@ -43,6 +43,7 @@ Original article how to create the starter template is available [here](https://
 
 * [.NET Core](https://www.microsoft.com/net/download/windows)
 * [NodeJS](https://nodejs.org/) >= 8.9
+* [Vue CLI](https://cli.vuejs.org/) >= 3.0
 * Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017
 
 ---
