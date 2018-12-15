@@ -23,7 +23,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Used Technology Stack
 
-**ASP.NET Core 2.1:**
+**ASP.NET Core 2.2:**
 
 * Web.API
 * JavaScript Services middleware to integrate with client app
