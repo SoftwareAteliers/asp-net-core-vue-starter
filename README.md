@@ -44,7 +44,7 @@ Original article how to create the starter template is available [here](https://
 * [.NET Core](https://www.microsoft.com/net/download/windows)
 * [NodeJS](https://nodejs.org/) >= 8.9
 * [Vue CLI](https://cli.vuejs.org/) >= 3.0
-* Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017
+* Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017/19
 
 ---
 
@@ -52,9 +52,19 @@ Original article how to create the starter template is available [here](https://
 
 There are two ways how to set up the project: one for people who want to create their own template and choose custom integrations and the other for developers who want to start with no configuration.
 
-## 1. Scaffold Vue.js app with custom configuration
+## Clone the starter with default configuration
 
 * Clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
+
+or you can use .NET Core CLI templates:
+
+* Install the template from NuGet repository: `dotnet new -i SoftwareAteliers.AspNetCoreVueStarter`
+
+* Initialize the project: `dotnet new vue -o MyProject`
+
+## Scaffold Vue.js app with custom configuration
+
+If you prefer to overwrite default Vue client app with custom settings, take the following steps:
 
 * **Remove all the contents** of the folder /ClientApp
 * Create a new Vue project by using Vue CLI: `vue create client-app` OR by using CLI graphical interface running `vue ui`
@@ -64,10 +74,6 @@ There are two ways how to set up the project: one for people who want to create 
 * **Move all the contents from the new folder /client-app to /ClientApp.**
 
 Now application is ready to run.
-
-## 2. Clone the starter with default configuration
-
-* Just clone this repository `git clone https://github.com/SoftwareAteliers/asp-net-core-vue-starter`
 
 ## Run the application
 
@@ -99,11 +105,19 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! P
 
 ---
 
+## Contributors
+
+Special thanks to everyone who helped and contributed to this project!
+
+* [@jdebarochez](https://github.com/jdebarochez)
+
+---
+
 ## License
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/content/LICENSE)
 
-Copyright &copy; 2018 [Software Ateliers](https://github.com/SoftwareAteliers)
+Copyright &copy; 2018 - 2019 [Software Ateliers](https://github.com/SoftwareAteliers)
 
 ## Where to find me
 
