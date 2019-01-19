@@ -9,28 +9,28 @@
   },
   "dependencies": {
     "register-service-worker": "^1.5.2",
-    "vue": "^2.5.21",
+    "vue": "^2.5.22",
     "vue-class-component": "^6.3.2",
-    "vue-property-decorator": "^7.2.0",
+    "vue-property-decorator": "^7.3.0",
     "vue-router": "^3.0.2",
-    "vuetify": "^1.4.0",
-    "vuex": "^3.0.1",
+    "vuetify": "^1.4.2",
+    "vuex": "^3.1.0",
     "vuex-class": "^0.3.1"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.2.5",
     "@types/node": "^10.12.18",
-    "@vue/cli-plugin-babel": "^3.2.2",
-    "@vue/cli-plugin-pwa": "^3.2.2",
-    "@vue/cli-plugin-typescript": "^3.2.2",
-    "@vue/cli-service": "^3.2.3",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-pwa": "^3.3.0",
+    "@vue/cli-plugin-typescript": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
     "axios": "^0.18.0",
     "babel-plugin-transform-imports": "^1.5.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "typescript": "^3.2.2",
+    "typescript": "^3.2.4",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-vuetify": "^0.4.6",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.22"
   }
 }
