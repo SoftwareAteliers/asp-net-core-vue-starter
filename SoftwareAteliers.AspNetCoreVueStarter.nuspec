@@ -8,7 +8,7 @@
     </description>
     <authors>SoftwareAteliers</authors>
     <projectUrl>https://github.com/SoftwareAteliers/asp-net-core-vue-starter</projectUrl>
-    <licenseUrl>https://github.com/SoftwareAteliers/asp-net-core-vue-starter/blob/master/content/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
