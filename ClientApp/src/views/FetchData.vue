@@ -12,8 +12,8 @@
             :loading="loading"
             class="elevation-1"
           >
-            <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
-            <template slot="items" slot-scope="props">
+            <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
+            <template v-slot:items="props">
               <td>{{ props.item.dateFormatted }}</td>
               <td>{{ props.item.temperatureC }}</td>
               <td>{{ props.item.temperatureF }}</td>
