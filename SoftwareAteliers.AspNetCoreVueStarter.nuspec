@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>SoftwareAteliers.AspNetCoreVueStarter</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <description>
       ASP.NET Core + Vue.js starter project
     </description>
