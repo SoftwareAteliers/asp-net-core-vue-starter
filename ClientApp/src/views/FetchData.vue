@@ -28,7 +28,7 @@
         type="error"
         v-text="errorMessage"
       >
-        This is a error alert.
+        This is an error alert.
       </v-alert>
       <v-alert
         :value="showError"
