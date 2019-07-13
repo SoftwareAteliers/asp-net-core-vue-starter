@@ -15,7 +15,7 @@
 export default {
   name: 'HelloWorld',
   props: {
-    quote : String,
+    quote: String,
     author: String,
   },
 };
