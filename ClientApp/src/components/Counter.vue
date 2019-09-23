@@ -3,14 +3,14 @@
     <p>Current count (Vuex):
       <strong>{{ currentCount }}</strong>
     </p>
-    <v-btn color="info" @click.prevent="increment">Increment</v-btn>
-    <v-btn color="info" @click.prevent="reset">Reset</v-btn>
+    <v-btn class="ma-2" color="info" @click.prevent="increment">Increment</v-btn>
+    <v-btn class="ma-2" color="info" @click.prevent="reset">Reset</v-btn>
   </div>
 </template>
 
 <script lang="ts">
-import { State, Action, Getter } from 'vuex-class';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Action, Getter } from 'vuex-class';
+import { Component, Vue } from 'vue-property-decorator';
 const namespace: string = 'counter';
 
 @Component

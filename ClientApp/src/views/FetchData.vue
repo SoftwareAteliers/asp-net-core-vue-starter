@@ -1,42 +1,46 @@
 <template>
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
-      <v-layout column>
-        <h1>Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
+      <v-row>
+        <v-col>
+          <h1>Weather forecast</h1>
+          <p>This component demonstrates fetching data from the server.</p>
 
-        <v-data-table
-          :headers="headers"
-          :items="forecasts"
-          hide-actions
-          :loading="loading"
-          class="elevation-1"
-        >
-          <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
-          <template v-slot:items="props">
-            <td>{{ props.item.dateFormatted }}</td>
-            <td>{{ props.item.temperatureC }}</td>
-            <td>{{ props.item.temperatureF }}</td>
-            <td>{{ props.item.summary }}</td>
-          </template>
-        </v-data-table>
-
-      </v-layout>
+          <v-data-table
+            :headers="headers"
+            :items="forecasts"
+            hide-default-footer
+            :loading="loading"
+            class="elevation-1"
+          >
+            <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
+            <template v-slot:items="props">
+              <td>{{ props.item.dateFormatted }}</td>
+              <td>{{ props.item.temperatureC }}</td>
+              <td>{{ props.item.temperatureF }}</td>
+              <td>{{ props.item.summary }}</td>
+            </template>
+          </v-data-table>
+        </v-col>
+      </v-row>
     </v-slide-y-transition>
-      <v-alert
-        :value="showError"
-        type="error"
-        v-text="errorMessage"
-      >
-        This is an error alert.
-      </v-alert>
-      <v-alert
-        :value="showError"
-        type="warning"
-      >
-        Are you sure you're using ASP.NET Core endpoint? (default at <a href="http://localhost:5000/fetch-data">http://localhost:5000</a>)<br>
-        API call would fail with status code 404 when calling from Vue app (default at <a href="http://localhost:8080/fetch-data">http://localhost:8080</a>) without settings devServer proxy in vue.config.js file.
-      </v-alert>      
+
+    <v-alert
+      :value="showError"
+      type="error"
+      v-text="errorMessage"
+    >
+      This is an error alert.
+    </v-alert>
+    
+    <v-alert
+      :value="showError"
+      type="warning"
+    >
+      Are you sure you're using ASP.NET Core endpoint? (default at <a href="http://localhost:5000/fetch-data">http://localhost:5000</a>)<br>
+      API call would fail with status code 404 when calling from Vue app (default at <a href="http://localhost:8080/fetch-data">http://localhost:8080</a>) without devServer proxy settings in vue.config.js file.
+    </v-alert>   
+       
   </v-container>
 </template>
 
