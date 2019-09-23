@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace AspNetCoreVueStarter.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    [ApiController]
+    public class SampleDataController : ControllerBase
     {
         private static string[] Summaries = new[]
         {
