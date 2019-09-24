@@ -14,11 +14,11 @@
             class="elevation-1"
           >
             <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
-            <template v-slot:items="props">
-              <td>{{ props.item.dateFormatted }}</td>
-              <td>{{ props.item.temperatureC }}</td>
-              <td>{{ props.item.temperatureF }}</td>
-              <td>{{ props.item.summary }}</td>
+            <template v-slot:item.date="{ item }">
+              <td>{{ item.date | date }}</td>
+            </template>
+            <template v-slot:item.temperatureC="{ item }">
+              <v-chip :color="getColor(item.temperatureC)" dark>{{ item.temperatureC }}</v-chip>
             </template>
           </v-data-table>
         </v-col>
@@ -56,27 +56,30 @@ export default class FetchDataView extends Vue {
   private errorMessage: string = 'Error while loading weather forecast.';
   private forecasts: Forecast[] = [];
   private headers = [
-    { text: 'Date', value: 'dateFormatted' },
+    { text: 'Date', value: 'date' },
     { text: 'Temp. (C)', value: 'temperatureC' },
     { text: 'Temp. (F)', value: 'temperatureF' },
     { text: 'Summary', value: 'summary' },
   ];
 
-  private created() {
-    this.fetchWeatherForecasts();
+  private getColor(temperature: number) {
+    if (temperature < 0) return 'blue'
+    else if (temperature >= 0 && temperature < 30) return 'green'
+    else return 'red'
+  }
+  private async created() {
+    await this.fetchWeatherForecasts();
   }
 
-  private fetchWeatherForecasts() {
-    axios
-      .get<Forecast[]>('api/SampleData/WeatherForecasts')
-      .then((response) => {
-        this.forecasts = response.data;
-      })
-      .catch((e) => {
-        this.showError = true;
-        this.errorMessage = `Error while loading weather forecast: ${e.message}.`;
-      })
-      .finally(() => (this.loading = false));
+  private async fetchWeatherForecasts() {
+    try {
+      const response = await axios.get<Forecast[]>('api/WeatherForecast');
+      this.forecasts = response.data;
+    } catch (e) {
+      this.showError = true;
+      this.errorMessage = `Error while loading weather forecast: ${e.message}.`;
+    }
+    this.loading = false
   }
 }
 </script>
