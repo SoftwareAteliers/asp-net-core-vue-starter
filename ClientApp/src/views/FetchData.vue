@@ -63,9 +63,13 @@ export default class FetchDataView extends Vue {
   ];
 
   private getColor(temperature: number) {
-    if (temperature < 0) return 'blue'
-    else if (temperature >= 0 && temperature < 30) return 'green'
-    else return 'red'
+    if (temperature < 0) {
+      return 'blue';
+    } else if (temperature >= 0 && temperature < 30) {
+      return 'green';
+    } else {
+      return 'red';
+    }
   }
   private async created() {
     await this.fetchWeatherForecasts();
@@ -79,7 +83,7 @@ export default class FetchDataView extends Vue {
       this.showError = true;
       this.errorMessage = `Error while loading weather forecast: ${e.message}.`;
     }
-    this.loading = false
+    this.loading = false;
   }
 }
 </script>

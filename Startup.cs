@@ -55,13 +55,11 @@ namespace AspNetCoreVueStarter
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
 
-#if DEBUG
-                if (System.Diagnostics.Debugger.IsAttached)
-                    endpoints.MapToVueCliProxy("{*path}", new SpaOptions { SourcePath = "ClientApp" }, "serve", regex: "Compiled successfully");
-                else
-#endif
-                    // note: output of vue cli or quasar cli should be wwwroot
-                    endpoints.MapFallbackToFile("index.html");
+                endpoints.MapToVueCliProxy("{*path}",
+                    new SpaOptions { SourcePath = "ClientApp" },
+                    "serve"
+                //, regex: "Compiled successfully"
+                );
             });
 
             //app.UseSpa(spa =>
