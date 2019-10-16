@@ -55,26 +55,12 @@ namespace AspNetCoreVueStarter
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
 
-                endpoints.MapToVueCliProxy("{*path}",
+                endpoints.MapToVueCliProxy(
+                    "{*path}",
                     new SpaOptions { SourcePath = "ClientApp" },
-                    "serve"
-                //, regex: "Compiled successfully"
-                );
+                    npmScript: (System.Diagnostics.Debugger.IsAttached) ? "serve" : null,
+                    regex: "Compiled successfully");
             });
-
-            //app.UseSpa(spa =>
-            //{
-            //    spa.Options.SourcePath = "ClientApp";
-
-            //    if (env.IsDevelopment())
-            //    {
-            //        // run npm process with client app
-            //        spa.UseVueCli(npmScript: "serve", port: 8080);
-            //        // if you just prefer to proxy requests from client app, use proxy to SPA dev server instead:
-            //        // app should be already running before starting a .NET client
-            //        // spa.UseProxyToSpaDevelopmentServer("http://localhost:8080"); // your Vue app port
-            //    }
-            //});
         }
     }
 }

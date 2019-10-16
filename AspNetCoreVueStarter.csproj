@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
-    <PackageReference Include="VueCliMiddleware" Version="3.0.0-preview7-1" />
+    <PackageReference Include="VueCliMiddleware" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
