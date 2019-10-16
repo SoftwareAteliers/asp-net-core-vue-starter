@@ -4,6 +4,10 @@ The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The te
 
 Original article how to create the starter template is available [here](https://medium.com/software-ateliers/asp-net-core-vue-template-with-custom-configuration-using-cli-3-0-8288e18ae80b).
 
+[![Nuget](https://img.shields.io/nuget/v/SoftwareAteliers.AspNetCoreVueStarter.svg?style=flat&color=2196f3)](https://www.nuget.org/packages/aspnetcore-vuejs/)
+
+> For ASP.NET Core 2.2 template use [release v1.1.0](https://github.com/SoftwareAteliers/asp-net-core-vue-starter/releases/tag/1.1.0)
+
 ---
 
 ## Table of Contents
@@ -23,10 +27,10 @@ Original article how to create the starter template is available [here](https://
 
 ## Used Technology Stack
 
-**ASP.NET Core 2.2:**
+**ASP.NET Core 3.0:**
 
 * Web.API
-* JavaScript Services middleware to integrate with client app
+* Vue CLI and JavaScript Services middlewares to integrate with client app
 
 **Vue.js with CLI 3.0 supporting optional integrations:**
 
@@ -41,7 +45,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Prerequisites
 
-* [.NET Core](https://www.microsoft.com/net/download/windows)
+* [.NET Core](https://www.microsoft.com/net/download/windows) >= 3.0
 * [NodeJS](https://nodejs.org/) >= 8.9
 * [Vue CLI](https://cli.vuejs.org/) >= 3.0
 * Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017/19
@@ -62,7 +66,7 @@ or you can use .NET Core CLI templates:
 
 * Initialize the project: `dotnet new vue -o MyProject`
 
-## Scaffold Vue.js app with custom configuration
+## (Optional) Scaffold Vue.js app with custom configuration
 
 If you prefer to overwrite default Vue client app with custom settings, take the following steps:
 
@@ -93,6 +97,8 @@ You have two choices when it comes to how you prefer to run the app. You can eit
 
 Browse to [http://localhost:5000](http://localhost:5000) for ASP.&#8203;NET Core + Vue app or browse to [http://localhost:8080](http://localhost:8080) for Vue app only.
 
+![Application screenshot](./screenshot.png)
+
 ## Recommended plugin for debugging Vue
 
 * Get Chrome DevTools for Vue.js [here](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
@@ -116,7 +122,7 @@ Special thanks to everyone who helped and contributed to this project!
 
 ## License
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/content/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://mit-license.org/)
 
 Copyright &copy; 2018 - 2019 [Software Ateliers](https://github.com/SoftwareAteliers)
 
