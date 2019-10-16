@@ -117,6 +117,7 @@ Special thanks to everyone who helped and contributed to this project!
 
 * [@jdebarochez](https://github.com/jdebarochez)
 * [@arisliang](https://github.com/arisliang)
+* [@dotnetshadow](https://github.com/dotnetshadow)
 
 ---
 
