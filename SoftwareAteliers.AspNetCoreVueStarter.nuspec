@@ -7,7 +7,7 @@
       ASP.NET Core + Vue.js starter project
     </description>
     <authors>SoftwareAteliers</authors>
-    <projectUrl>https://github.com/SoftwareAteliers/asp-net-core-vue-starter</projectUrl>
+    <projectUrl>https://github.com/SoftwareAteliers/AspNetCoreVueStarter</projectUrl>
     <license type="expression">MIT</license>
     <packageTypes>
       <packageType name="Template" />

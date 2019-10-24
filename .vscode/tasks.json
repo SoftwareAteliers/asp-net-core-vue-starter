@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/asp-net-core-vue-starter.csproj"
+                "${workspaceFolder}/AspNetCoreVueStarter.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

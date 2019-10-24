@@ -1,6 +1,6 @@
 {
-  "name": "asp-net-core-vue-starter",
-  "short_name": "asp-net-core-vue-starter",
+  "name": "AspNetCoreVueStarter",
+  "short_name": "AspNetCoreVueStarter",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
