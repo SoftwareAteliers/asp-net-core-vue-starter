@@ -27,7 +27,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Used Technology Stack
 
-**ASP.NET Core 3.0:**
+**ASP.NET Core 3.1:**
 
 * Web.API
 * Vue CLI and JavaScript Services middlewares to integrate with client app
@@ -45,7 +45,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Prerequisites
 
-* [.NET Core](https://www.microsoft.com/net/download/windows) >= 3.0
+* [.NET Core](https://www.microsoft.com/net/download/windows) >= 3.1
 * [NodeJS](https://nodejs.org/) >= 8.9
 * [Vue CLI](https://cli.vuejs.org/) >= 4.0
 * Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017/19
