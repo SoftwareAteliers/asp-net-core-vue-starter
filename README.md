@@ -1,6 +1,6 @@
 ﻿# ASP.NET Core Vue Starter
 
-The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The template runs on ASP.NET Core 3.0 and is created by Vue CLI 4.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
+The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The template runs on ASP.NET Core 3.1 and is created by Vue CLI 4.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
 
 Original article how to create the starter template is available [here](https://medium.com/software-ateliers/asp-net-core-vue-template-with-custom-configuration-using-cli-3-0-8288e18ae80b).
 
@@ -99,7 +99,7 @@ You have three choices when it comes to how you prefer to run the app. You can e
 `docker build -t <IMAGE_NAME> .`
 
 * Run the application in a cmd window by this command:
-`docker run -d -p 8080:80 <IMAGE_NAME>`
+`docker run -d -p 5000:80 <IMAGE_NAME>`
 
 ## View your application running
 
