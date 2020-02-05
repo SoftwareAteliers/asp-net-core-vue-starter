@@ -81,7 +81,7 @@ Now application is ready to run.
 
 ## Run the application
 
-You have two choices when it comes to how you prefer to run the app. You can either use the command line or the build-in run command.
+You have three choices when it comes to how you prefer to run the app. You can either use the command line or the build-in run command.
 
 ### 1. Using the command line
 
@@ -92,6 +92,14 @@ You have two choices when it comes to how you prefer to run the app. You can eit
 * Run the application in VSCode or Visual Studio 2017 by hitting `F5`
 
 > It will take some time during the first run to download all client side dependencies.
+
+### 3. Using docker
+
+* Run the following command in a cmd window to build the docker image:
+`docker build -t <IMAGE_NAME> .`
+
+* Run the application in a cmd window by this command:
+`docker run -d -p 8080:80 <IMAGE_NAME>`
 
 ## View your application running
 
@@ -119,6 +127,7 @@ Special thanks to everyone who helped and contributed to this project!
 * [@arisliang](https://github.com/arisliang)
 * [@dotnetshadow](https://github.com/dotnetshadow)
 * [@NickStees](https://github.com/NickStees)
+* [@wallyjue](https://github.com/wallyjue)
 
 ---
 
