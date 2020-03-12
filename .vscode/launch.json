@@ -9,7 +9,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.0/AspNetCoreVueStarter.dll",
+      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/AspNetCoreVueStarter.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
