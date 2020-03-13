@@ -128,6 +128,7 @@ Special thanks to everyone who helped and contributed to this project!
 * [@dotnetshadow](https://github.com/dotnetshadow)
 * [@NickStees](https://github.com/NickStees)
 * [@wallyjue](https://github.com/wallyjue)
+* [@Ibrahim-Islam](https://github.com/Ibrahim-Islam)
 
 ---
 
