@@ -29,6 +29,43 @@
       "type": "coreclr",
       "request": "attach",
       "processId": "${command:pickProcess}"
+    },
+    {
+      "name": "Launch Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5000",
+      "webRoot": "${workspaceFolder}/ClientApp",
+      "breakOnLoad": true,
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///*": "${webRoot}/*",
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/src/*"
+      }
+    },
+    {
+      "name": "Launch Firefox",
+      "request": "launch",
+      "url": "http://localhost:5000",
+      "type": "firefox",
+      "webRoot": "${workspaceFolder}/ClientApp",
+      "pathMappings": [
+        {
+          "url": "webpack:///src",
+          "path": "${webRoot}/src"
+        }
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug SPA and API (Chrome)",
+      "configurations": [".NET Core Launch (web)", "Launch Chrome"]
+    },
+    {
+      "name": "Debug SPA and API (Firefox)",
+      "configurations": [".NET Core Launch (web)", "Launch Firefox"]
     }
   ]
 }
