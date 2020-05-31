@@ -142,6 +142,8 @@ Special thanks to everyone who helped and contributed to this project!
 * [@NickStees](https://github.com/NickStees)
 * [@wallyjue](https://github.com/wallyjue)
 * [@Ibrahim-Islam](https://github.com/Ibrahim-Islam)
+* [@ʃʈɑɲ](https://github.com/bickycheese)
+* [@nickyg91](https://github.com/nickyg91)
 
 ---
 
