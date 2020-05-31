@@ -93,19 +93,32 @@ You have three choices when it comes to how you prefer to run the app. You can e
 
 > It will take some time during the first run to download all client side dependencies.
 
-### 3. Using docker
+Browse to [http://localhost:5000](http://localhost:5000) for ASP.&#8203;NET Core + Vue app or browse to [http://localhost:8080](http://localhost:8080) for Vue app only.
+
+![Application screenshot](./screenshot.png)
+
+## Publish the application
+
+### 1. Folder output
+
+* Run the .NET publish command using Release configuration: `dotnet publish -c Release`
+
+or
+
+* Follow the Publish wizard in Visual Studio selecting Folder profile.
+
+### 2. Docker output
 
 * Run the following command in a cmd window to build the docker image:
 `docker build -t <IMAGE_NAME> .`
+
+> ATTENTION! Do not miss the final dot to build the current directory
 
 * Run the application in a cmd window by this command:
 `docker run -d -p 5000:80 <IMAGE_NAME>`
 
 ## View your application running
 
-Browse to [http://localhost:5000](http://localhost:5000) for ASP.&#8203;NET Core + Vue app or browse to [http://localhost:8080](http://localhost:8080) for Vue app only.
-
-![Application screenshot](./screenshot.png)
 
 ## Recommended plugin for debugging Vue
 
