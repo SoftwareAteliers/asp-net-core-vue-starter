@@ -13,13 +13,13 @@
     <Copyright>MIT 2020 Software Ateliers</Copyright>
     <AssemblyName>AspNetCoreVueStarter</AssemblyName>
     <RootNamespace>AspNetCoreVueStarter</RootNamespace>
-    <Version>2.4.0</Version>
-    <AssemblyVersion>2.4.0.0</AssemblyVersion>
-    <FileVersion>2.4.0.0</FileVersion>
+    <Version>2.4.1</Version>
+    <AssemblyVersion>2.4.1.0</AssemblyVersion>
+    <FileVersion>2.4.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.6" />
     <PackageReference Include="VueCliMiddleware" Version="3.1.1" />
   </ItemGroup>
 
