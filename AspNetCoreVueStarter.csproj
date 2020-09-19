@@ -30,11 +30,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\plugins\axios.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="ClientApp\tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\plugins\axios.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

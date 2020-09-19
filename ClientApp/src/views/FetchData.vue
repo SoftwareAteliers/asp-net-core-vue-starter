@@ -46,7 +46,6 @@
 // an example of a Vue Typescript component using Vue.extend
 import Vue from 'vue';
 import { Forecast } from '../models/Forecast';
-import axios from 'axios';
 
 export default Vue.extend({
   data() {
@@ -75,7 +74,7 @@ export default Vue.extend({
     },
     async fetchWeatherForecasts() {
       try {
-        const response = await axios.get<Forecast[]>('api/WeatherForecast');
+        const response = await this.$axios.get<Forecast[]>('api/WeatherForecast');
         this.forecasts = response.data;
       } catch (e) {
         this.showError = true;
