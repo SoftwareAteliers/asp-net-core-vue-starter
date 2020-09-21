@@ -26,7 +26,7 @@ _axios.interceptors.request.use(
 
 // Add a response interceptor
 _axios.interceptors.response.use(
-  // Do something before request is sent
+  // Do something with response data
   (response: any) => response,
   // Do something with response error
   (error: any) => Promise.reject(error),
