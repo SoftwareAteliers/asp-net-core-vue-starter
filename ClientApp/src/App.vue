@@ -26,9 +26,9 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <router-view/>
-    </v-content>
+    </v-main>
 
     <v-footer app>
       <span>&nbsp;Software Ateliers&nbsp;&copy;&nbsp;2020</span>
