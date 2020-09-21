@@ -44,4 +44,4 @@ declare module 'vue/types/vue' {
 
 Vue.use(AxiosPlugin);
 
-export default Plugin;
+export default AxiosPlugin;
