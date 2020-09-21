@@ -48,7 +48,6 @@
 // an example of a Vue Typescript component using vue-property-decorator
 import { Component, Vue } from 'vue-property-decorator';
 import { Forecast } from '../models/Forecast';
-import axios from 'axios';
 
 @Component({})
 export default class FetchDataView extends Vue {
@@ -78,7 +77,7 @@ export default class FetchDataView extends Vue {
 
   private async fetchWeatherForecasts() {
     try {
-      const response = await axios.get<Forecast[]>('api/WeatherForecast');
+      const response = await this.$axios.get<Forecast[]>('api/WeatherForecast');
       this.forecasts = response.data;
     } catch (e) {
       this.showError = true;
