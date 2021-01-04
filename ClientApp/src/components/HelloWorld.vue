@@ -7,7 +7,7 @@
           <em>&mdash;{{ author }}</em>
         </small>
       </footer>
-    </blockquote>    
+    </blockquote>
   </div>
 </template>
 
@@ -16,9 +16,9 @@ export default {
   name: 'HelloWorld',
   props: {
     quote: String,
-    author: String,
-  },
-};
+    author: String
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

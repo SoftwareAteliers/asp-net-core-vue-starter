@@ -37,16 +37,6 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/AspNetCoreVueStarter.csproj"
-            ],
-            "problemMatcher": "$msCompile"
         }
     ]
 }

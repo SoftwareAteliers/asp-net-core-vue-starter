@@ -1,5 +1,5 @@
-import '@mdi/font/css/materialdesignicons.css';
-import Vue from 'vue';
+import '@mdi/font/css/materialdesignicons.css'
+import Vue from 'vue'
 import Vuetify, {
   VAlert,
   VApp,
@@ -10,8 +10,8 @@ import Vuetify, {
   VIcon,
   VToolbar,
   VDataTable,
-  VProgressLinear,
-} from 'vuetify/lib';
+  VProgressLinear
+} from 'vuetify/lib'
 
 // vue-cli a-la-carte installation
 Vue.use(Vuetify, {
@@ -25,9 +25,9 @@ Vue.use(Vuetify, {
     VIcon,
     VToolbar,
     VDataTable,
-    VProgressLinear,
-  },
-});
+    VProgressLinear
+  }
+})
 
 const opts = {
   theme: {
@@ -38,12 +38,12 @@ const opts = {
         accent: '#82B1FF',
         error: '#FF5252',
         info: '#2196F3',
-        success: '#4CAF50',
-      },
+        success: '#4CAF50'
+      }
       // dark: {
       // }
-    },
-  },
-};
+    }
+  }
+}
 
-export default new Vuetify(opts);
+export default new Vuetify(opts)
