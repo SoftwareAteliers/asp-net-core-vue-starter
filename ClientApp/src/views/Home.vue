@@ -5,7 +5,7 @@
       <HelloWorld quote="Welcome to Your ASP.NET Core + Vue.js + TypeScript App" author="brought to you by Software Ateliers" />
     </v-layout>
     <v-slide-y-transition mode="out-in">
-      <v-row>        
+      <v-row>
         <v-col>
           <h1 class="headline">Hello, world!</h1>
           <p>Welcome to your new single-page application, built with: </p>
@@ -29,7 +29,7 @@
               <strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
             <li>
               <strong>Development server integration</strong>. In development mode, the development server from
-              <code>vue-cli-service</code> runs in the background automatically, so your client-side resources are dynamically built on 
+              <code>vue-cli-service</code> runs in the background automatically, so your client-side resources are dynamically built on
               demand and the page refreshes when you modify any file.</li>
             <li>
               <strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the
@@ -51,7 +51,7 @@
             <li>
               <a href="https://github.com/vuejs/vuex#readme" target="_blank">Vuex</a> - state management for Vue.js</li>
             <li>
-              <a href="https://github.com/yyx990803/register-service-worker#readme" target="_blank">Register Service Worker</a> - script for registering service 
+              <a href="https://github.com/yyx990803/register-service-worker#readme" target="_blank">Register Service Worker</a> - script for registering service
               worker with hooks for common events to simplify PWA development.</li>
           </ul>
         </v-col>
@@ -61,13 +61,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { Component, Vue } from 'vue-property-decorator'
+import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 
 @Component({
   components: {
-    HelloWorld,
-  },
+    HelloWorld
+  }
 })
 export default class Home extends Vue {}
 </script>

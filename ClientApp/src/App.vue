@@ -17,10 +17,10 @@
     <v-app-bar app :clipped-left="clipped" color="info" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-btn class="d-none d-lg-flex" icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+        <v-icon v-html="miniVariant ? 'mdi-chevron-right' : 'mdi-chevron-left'"></v-icon>
       </v-btn>
       <v-btn class="d-none d-lg-flex" icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
+        <v-icon>mdi-web</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
@@ -38,22 +38,22 @@
 </template>
 
 <script lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
-import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from '@/components/HelloWorld.vue'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
-  components: { HelloWorld },
+  components: { HelloWorld }
 })
 export default class App extends Vue {
-  private clipped: boolean = true;
-  private drawer: boolean = true;
-  private miniVariant: boolean = false;
-  private right: boolean = true;
-  private title: string = 'ASP.NET Core Vue Starter';
+  private clipped = true
+  private drawer = true
+  private miniVariant = false
+  private right = true
+  private title = 'ASP.NET Core Vue Starter'
   private items = [
-    { title: 'Home', icon: 'home', link: '/' },
-    { title: 'Counter', icon: 'touch_app', link: '/counter' },
-    { title: 'Fetch data', icon: 'get_app', link: '/fetch-data' },
-  ];
+    { title: 'Home', icon: 'mdi-home', link: '/' },
+    { title: 'Counter', icon: 'mdi-gesture-tap', link: '/counter' },
+    { title: 'Fetch data', icon: 'mdi-download', link: '/fetch-data' }
+  ]
 }
 </script>

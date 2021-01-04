@@ -13,11 +13,13 @@
             :loading="loading"
             class="elevation-1"
           >
-            <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
-            <template v-slot:item.date="{ item }">
+            <template v-slot:progress>
+              <v-progress-linear color="blue" indeterminate></v-progress-linear>
+            </template>
+            <template v-slot:[`item.date`]="{ item }">
               <td>{{ item.date | date }}</td>
             </template>
-            <template v-slot:item.temperatureC="{ item }">
+            <template v-slot:[`item.temperatureC`]="{ item }">
               <v-chip :color="getColor(item.temperatureC)" dark>{{ item.temperatureC }}</v-chip>
             </template>
           </v-data-table>
@@ -44,11 +46,11 @@
 
 <script lang="ts">
 // an example of a Vue Typescript component using Vue.extend
-import Vue from 'vue';
-import { Forecast } from '../models/Forecast';
+import Vue from 'vue'
+import { Forecast } from '../models/Forecast'
 
 export default Vue.extend({
-  data() {
+  data () {
     return {
       loading: true,
       showError: false,
@@ -58,33 +60,33 @@ export default Vue.extend({
         { text: 'Date', value: 'date' },
         { text: 'Temp. (C)', value: 'temperatureC' },
         { text: 'Temp. (F)', value: 'temperatureF' },
-        { text: 'Summary', value: 'summary' },
-      ],
-    };
+        { text: 'Summary', value: 'summary' }
+      ]
+    }
   },
   methods: {
-    getColor(temperature: number) {
+    getColor (temperature: number) {
       if (temperature < 0) {
-        return 'blue';
+        return 'blue'
       } else if (temperature >= 0 && temperature < 30) {
-        return 'green';
+        return 'green'
       } else {
-        return 'red';
+        return 'red'
       }
     },
-    async fetchWeatherForecasts() {
+    async fetchWeatherForecasts () {
       try {
-        const response = await this.$axios.get<Forecast[]>('api/WeatherForecast');
-        this.forecasts = response.data;
+        const response = await this.$axios.get<Forecast[]>('api/WeatherForecast')
+        this.forecasts = response.data
       } catch (e) {
-        this.showError = true;
-        this.errorMessage = `Error while loading weather forecast: ${e.message}.`;
+        this.showError = true
+        this.errorMessage = `Error while loading weather forecast: ${e.message}.`
       }
-      this.loading = false;
-    },
+      this.loading = false
+    }
   },
-  async created() {
-    await this.fetchWeatherForecasts();
-  },
-});
+  async created () {
+    await this.fetchWeatherForecasts()
+  }
+})
 </script>

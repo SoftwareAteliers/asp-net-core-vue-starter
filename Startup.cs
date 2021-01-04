@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,7 +22,7 @@ namespace AspNetCoreVueStarter
             services.AddControllersWithViews();
 
             // Add AddRazorPages if the app uses Razor Pages.
-            services.AddRazorPages();
+            // services.AddRazorPages();
 
             // In production, the Vue files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -46,10 +45,12 @@ namespace AspNetCoreVueStarter
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+            if (!env.IsDevelopment())
+            {
+                app.UseSpaStaticFiles();
+            }
 
             app.UseRouting();
 
@@ -59,22 +60,25 @@ namespace AspNetCoreVueStarter
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
 
-                if (env.IsDevelopment())
-                {
-                    endpoints.MapToVueCliProxy(
-                        "{*path}",
-                        new SpaOptions { SourcePath = "ClientApp" },
-                        npmScript: "serve",
-                        regex: "Compiled successfully");
-                }
-
                 // Add MapRazorPages if the app uses Razor Pages. Since Endpoint Routing includes support for many frameworks, adding Razor Pages is now opt -in.
-                endpoints.MapRazorPages();
+                // endpoints.MapRazorPages();
             });
 
             app.UseSpa(spa =>
             {
+                // To learn more about options for serving an Angular SPA from ASP.NET Core,
+                // see https://go.microsoft.com/fwlink/?linkid=864501
+
                 spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    // run npm process with client app
+                    spa.UseVueCli(npmScript: "serve", port: 8080);
+                    // if you just prefer to proxy requests from client app, use proxy to SPA dev server instead,
+                    // app should be already running before starting a .NET client:
+                    // spa.UseProxyToSpaDevelopmentServer("http://localhost:8080"); // your Vue app port
+                }
             });
         }
     }

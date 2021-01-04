@@ -9,24 +9,27 @@
 </template>
 
 <script lang="ts">
-import { Action, Getter } from 'vuex-class';
-import { Component, Vue } from 'vue-property-decorator';
-const namespace: string = 'counter';
+import { Action, Getter } from 'vuex-class'
+import { Component, Vue } from 'vue-property-decorator'
+const namespace = 'counter'
 
 @Component
 export default class Counter extends Vue {
   @Getter('currentCount', { namespace })
   private currentCount!: number;
-  @Action('increment', { namespace })
-  private incrementCounter: any;
-  @Action('reset', { namespace })
-  private resetCounter: any;
 
-  private increment() {
-    this.incrementCounter();
+  @Action('increment', { namespace })
+  private incrementCounter!: () => void
+
+  @Action('reset', { namespace })
+  private resetCounter!: () => void
+
+  private increment () {
+    this.incrementCounter()
   }
-  private reset() {
-    this.resetCounter();
+
+  private reset () {
+    this.resetCounter()
   }
 }
 </script>
