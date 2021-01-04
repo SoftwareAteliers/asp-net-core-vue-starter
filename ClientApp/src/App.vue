@@ -31,7 +31,7 @@
     </v-main>
 
     <v-footer app>
-      <span>&nbsp;Software Ateliers&nbsp;&copy;&nbsp;2020</span>
+      <span>&nbsp;Software Ateliers&nbsp;&copy;&nbsp;2021</span>
     </v-footer>
 
   </v-app>
