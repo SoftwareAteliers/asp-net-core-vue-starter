@@ -6,8 +6,8 @@ Original article how to create the starter template is available [here](https://
 
 [![Nuget](https://img.shields.io/nuget/v/SoftwareAteliers.AspNetCoreVueStarter.svg?style=flat&color=2196f3)](https://www.nuget.org/packages/SoftwareAteliers.AspNetCoreVueStarter/)
 
+> For ASP.NET Core 3.1 template use [release v2.6.0](https://github.com/SoftwareAteliers/asp-net-core-vue-starter/releases/tag/2.6.0)
 > For ASP.NET Core 2.2 template use [release v1.1.0](https://github.com/SoftwareAteliers/asp-net-core-vue-starter/releases/tag/1.1.0)
-
 ---
 
 ## Table of Contents
@@ -146,6 +146,7 @@ Special thanks to everyone who helped and contributed to this project!
 * [@nickyg91](https://github.com/nickyg91)
 * [@glebov21](https://github.com/glebov21)
 * [@TobbenTM](https://github.com/TobbenTM)
+* [@JohnCampionJr](https://github.com/JohnCampionJr)
 
 ---
 
