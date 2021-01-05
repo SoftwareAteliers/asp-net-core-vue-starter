@@ -37,27 +37,16 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:5000",
-      "webRoot": "${workspaceFolder}/ClientApp",
+      "webRoot": "${workspaceFolder}/ClientApp/",
       "breakOnLoad": true,
-      "sourceMaps": true,
-      "sourceMapPathOverrides": {
-        "webpack:///*": "${webRoot}/*",
-        "webpack:///./*": "${webRoot}/*",
-        "webpack:///src/*": "${webRoot}/*"
-      }
+      "sourceMaps": true
     },
     {
       "name": "Launch Firefox",
       "type": "firefox",
       "request": "launch",
       "url": "http://localhost:5000",
-      "webRoot": "${workspaceFolder}/ClientApp",
-      "pathMappings": [
-        {
-          "url": "webpack:///src/",
-          "path": "${webRoot}/"
-        }
-      ]
+      "webRoot": "${workspaceFolder}/ClientApp/"
     }
   ],
   "compounds": [
