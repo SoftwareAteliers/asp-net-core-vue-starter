@@ -1,3 +1,3 @@
 export interface CounterState {
-  counter: number;
+  counter: number
 }

@@ -33,13 +33,13 @@ _axios.interceptors.response.use(
   (error) => Promise.reject(error)
 )
 
-function AxiosPlugin (vue: typeof Vue): void {
+function AxiosPlugin(vue: typeof Vue): void {
   vue.prototype.$axios = _axios
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $axios: AxiosInstance;
+    $axios: AxiosInstance
   }
 }
 

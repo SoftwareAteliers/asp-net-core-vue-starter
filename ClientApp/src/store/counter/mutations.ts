@@ -2,10 +2,10 @@ import { MutationTree } from 'vuex'
 import { CounterState } from './types'
 
 export const mutations: MutationTree<CounterState> = {
-  incrementCounter (state) {
+  incrementCounter(state) {
     state.counter++
   },
-  resetCounter (state) {
+  resetCounter(state) {
     state.counter = 0
   }
 }
