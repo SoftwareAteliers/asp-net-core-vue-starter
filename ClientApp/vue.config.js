@@ -4,6 +4,6 @@ module.exports = {
   },
   transpileDependencies: ['vuetify'],
   devServer: {
-    progress: false
+    progress: !!process.env.VUE_DEV_SERVER_PROGRESS
   }
 }
