@@ -37,6 +37,17 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "kill",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "${workspaceFolder}/bin/Debug/net5.0/AspNetCoreVueStarter.dll",
+                "/mode:kill"
+            ],
+            "problemMatcher": []
         }
     ]
 }

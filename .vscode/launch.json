@@ -13,6 +13,8 @@
       "program": "${workspaceFolder}/bin/Debug/net5.0/AspNetCoreVueStarter.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
+      // this will kill any stray vue-cli processes, as the .NET app can't shut them down when it is killed by the debugger
+      "postDebugTask": "kill",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
