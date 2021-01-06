@@ -34,6 +34,9 @@ namespace AspNetCoreVueStarter
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            _ = CommandLine.Arguments.TryGetOptions(System.Environment.GetCommandLineArgs(), false, out string mode, out ushort port, out bool https);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -45,7 +48,8 @@ namespace AspNetCoreVueStarter
                 app.UseHsts();
             }
 
-            // app.UseHttpsRedirection();
+            if (https) app.UseHttpsRedirection();
+
             app.UseStaticFiles();
             if (!env.IsDevelopment())
             {
@@ -73,11 +77,18 @@ namespace AspNetCoreVueStarter
 
                 if (env.IsDevelopment())
                 {
+
                     // run npm process with client app
-                    spa.UseVueCli(npmScript: "serve", port: 8080, forceKill: true);
+                    if (mode == "start") {
+                        spa.UseVueCli(npmScript: "serve", port: port, forceKill: true, https: https);
+                    }
+
                     // if you just prefer to proxy requests from client app, use proxy to SPA dev server instead,
                     // app should be already running before starting a .NET client:
-                    // spa.UseProxyToSpaDevelopmentServer("http://localhost:8080"); // your Vue app port
+                    // run npm process with client app
+                    if (mode == "attach") {
+                        spa.UseProxyToSpaDevelopmentServer($"{(https ? "https" : "http")}://localhost:{port}"); // your Vue app port
+                    }
                 }
             });
         }
