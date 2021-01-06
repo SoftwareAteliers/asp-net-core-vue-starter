@@ -3,10 +3,10 @@ import { CounterState } from './types'
 import { RootState } from '../types'
 
 export const actions: ActionTree<CounterState, RootState> = {
-  increment ({ commit }) {
+  increment({ commit }) {
     commit('incrementCounter')
   },
-  reset ({ commit }) {
+  reset({ commit }) {
     commit('resetCounter')
   }
 }
