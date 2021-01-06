@@ -5,28 +5,65 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": ".NET Core Launch (web)",
+      "name": ".NET Core & Vue Server",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build",
+      "logging": {
+        "moduleLoad": false
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VUE_DEV_SERVER_PROGRESS": "true"
+      },
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build-vue-cli-serve",
       // If you have changed target frameworks, make sure to update the program path.
       "program": "${workspaceFolder}/bin/Debug/net5.0/AspNetCoreVueStarter.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}",
-      // this will kill any stray vue-cli processes, as the .NET app can't shut them down when it is killed by the debugger
-      "postDebugTask": "kill",
+      "args": [
+        "/mode:attach"
+      ],
       "stopAtEntry": false,
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      },
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        "action": "startDebugging",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "name": "Chrome Browser"
+      },
+      // this will kill any stray vue-cli processes, as the .NET app can't shut them down when it is killed by the debugger
+      "postDebugTask": "kill"
+    },
+    {
+      "name": ".NET Core Web",
+      "type": "coreclr",
+      "request": "launch",
+      "logging": {
+        "moduleLoad": false
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/bin/Debug/net5.0/AspNetCoreVueStarter.dll",
+      "args": [
+        "/mode:start"
+      ],
+      "stopAtEntry": false,
       "sourceFileMap": {
         "/Views": "${workspaceFolder}/Views"
-      }
+      },
+      // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+      "serverReadyAction": {
+        "action": "startDebugging",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "name": "Chrome Browser"
+      },
+      // this will kill any stray vue-cli processes, as the .NET app can't shut them down when it is killed by the debugger
+      "postDebugTask": "kill"
     },
     {
       "name": ".NET Core Attach",
@@ -35,36 +72,20 @@
       "processId": "${command:pickProcess}"
     },
     {
-      "name": "Launch Chrome",
+      "name": "Chrome Browser",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:5000",
-      "webRoot": "${workspaceFolder}/ClientApp/",
+      "webRoot": "${workspaceFolder}/ClientApp",
       "breakOnLoad": true,
-      "sourceMaps": true
+      "sourceMaps": true,
     },
     {
-      "name": "Launch Firefox",
+      "name": "Firefox Browser",
       "type": "firefox",
       "request": "launch",
       "url": "http://localhost:5000",
-      "webRoot": "${workspaceFolder}/ClientApp/"
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Debug SPA and API (Chrome)",
-      "configurations": [
-        ".NET Core Launch (web)",
-        "Launch Chrome"
-      ]
-    },
-    {
-      "name": "Debug SPA and API (Firefox)",
-      "configurations": [
-        ".NET Core Launch (web)",
-        "Launch Firefox"
-      ]
+      "webRoot": "${workspaceFolder}/ClientApp"
     }
   ]
 }

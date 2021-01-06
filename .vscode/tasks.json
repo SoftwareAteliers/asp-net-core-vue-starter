@@ -47,7 +47,62 @@
                 "${workspaceFolder}/bin/Debug/net5.0/AspNetCoreVueStarter.dll",
                 "/mode:kill"
             ],
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
             "problemMatcher": []
+        },
+        {
+            "label": "vue-cli-serve",
+            "command": "npm",
+            "type": "shell",
+            "isBackground": true,
+            "options": {
+                "cwd": "${workspaceFolder}/ClientApp/",
+                "env": {
+                    "VUE_DEV_SERVER_PROGRESS": "true"
+                }
+            },
+            "args": [
+                "run",
+                "serve"
+            ],
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": [
+                {
+                  "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                  ],
+                  "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".",
+                    "endsPattern": "App running at",
+                  }
+                }
+              ]
+        },
+        {
+            "label": "build-vue-cli-serve",
+            "dependsOn": ["build", "vue-cli-serve"],
+            "dependsOrder": "sequence",
         }
+
     ]
 }
