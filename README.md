@@ -155,7 +155,7 @@ Special thanks to everyone who helped and contributed to this project!
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://mit-license.org/)
 
-Copyright &copy; 2018 - 2021 [Software Ateliers](https://github.com/SoftwareAteliers)
+Copyright &copy; 2018 - 2022 [Software Ateliers](https://github.com/SoftwareAteliers)
 
 ## Where to find me
 

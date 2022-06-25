@@ -1,5 +1,5 @@
 # Package Alternatives
-This file containts references for changing out parts of package.json depending on what features you want
+This file contains references for changing out parts of package.json depending on what features you want
 ## ESLint / Prettier Options
 - See comments in eslintrc.js
 - Also recommend editor.config so VS Code Prettier doesn't just pickup Code's settings
