@@ -17,14 +17,61 @@ namespace AspNetCoreVueStarter
                 return;
             }
 
-            CreateHostBuilder(args).Build().Run();
-        }
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/dist";
+            });
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            var app = builder.Build();
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+
+            if (https) app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseSpaStaticFiles();
+            }
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (app.Environment.IsDevelopment())
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    if (mode == "start")
+                    {
+                        spa.UseVueCli(npmScript: "serve", port: port, forceKill: true, https: https);
+                    }
+
+                    if (mode == "attach")
+                    {
+                        spa.UseProxyToSpaDevelopmentServer($"{(https ? "https" : "http")}://localhost:{port}");
+                    }
+                }
+            });
+
+            app.Run();
+        }
     }
 }

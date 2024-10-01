@@ -1,6 +1,6 @@
 ﻿# ASP.NET Core Vue Starter
 
-The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The template runs on ASP.NET Core 5.0 and is created by Vue CLI 4.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
+The repository contains an ASP.&#8203;NET Core + Vue.js starter template. The template runs on ASP.NET Core 6.0 and is created by Vue CLI 4.0 with a new plugin based architecture allowing developers to interactively scaffold a new project with just a one command.
 
 Original article how to create the starter template is available [here](https://medium.com/software-ateliers/asp-net-core-vue-template-with-custom-configuration-using-cli-3-0-8288e18ae80b).
 
@@ -28,7 +28,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Used Technology Stack
 
-**ASP.NET Core 5.0:**
+**ASP.NET Core 6.0:**
 
 * Web.API
 * Vue CLI and JavaScript Services middlewares to integrate with client app
@@ -46,7 +46,7 @@ Original article how to create the starter template is available [here](https://
 
 ## Prerequisites
 
-* [.NET Core](https://www.microsoft.com/net/download/windows) >= 5.0
+* [.NET Core](https://www.microsoft.com/net/download/windows) >= 6.0
 * [NodeJS](https://nodejs.org/) >= 8.9
 * [Vue CLI](https://cli.vuejs.org/) >= 4.0
 * Your favourite editor (I prefer [VS Code](https://code.visualstudio.com/)), or VS 2017/19
